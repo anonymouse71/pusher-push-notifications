@@ -17,12 +17,19 @@ You can install the package via composer:
 composer require LaravelNotificationChannels/pusher-push-notifications
 ```
 
+Next, you must install the service provider:
+
+```php
+// config/app.php
+'providers' => [
+    ...
+    NotificationChannels\PusherPushNotifications\PusherPushNotificationsServiceProvider::class,
+];
+```
+
 ## Usage
 
-``` php
-$skeleton = new Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
-```
+Coming soon...
 
 ## Changelog
 
