@@ -15,15 +15,9 @@ class Channel
      */
     protected $pusher;
 
-    public function __construct()
+    public function __construct(Pusher $pusher)
     {
-        $pusherConfig = config('broadcasting.connections.pusher');
-
-        $this->pusher = new Pusher(
-            $pusherConfig['key'],
-            $pusherConfig['secret'],
-            $pusherConfig['app_id']
-        );
+        $this->pusher = $pusher;
     }
 
     /**
